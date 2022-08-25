@@ -148,3 +148,89 @@ function averOfAllNum(arr){
 }
 
 console.log(averOfAllNum(aray))
+
+//11. Write a function that takes two arrays of numbers and returns true if the average of the elements in the first array is greater than the 
+//average of the elements in the second array.
+
+function averOfAllNum2(arr1, arr2 ){
+    addNum1  = 0
+    for (num1 in arr1){
+        num1 = arr1[num1];
+        addNum1 = addNum1 + num1;
+    }
+    addNum2  = 0
+    for (num2 in arr2){
+        num2 = arr2[num2];
+        addNum2 = addNum2 + num2;
+    }
+    let average1 = addNum1 / arr1.length
+    let average2 = addNum2 / arr2.length
+    console.log(average1);
+    console.log(average2);
+    if(average1 > average2){
+        return true
+    }
+    return false
+
+    
+}
+
+console.log(averOfAllNum2(aray, nameLengths1))
+
+// 12.	Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket, and returns true if it is hot outside 
+//and if moneyInPocket is greater than 10.50.
+
+function willBuyDrink(isHotOutside, moneyInPocket){
+    if ( isHotOutside === true && moneyInPocket > 10.50 ){
+        return true
+    }
+    return false
+}
+ 
+console.log(willBuyDrink(true, 11))
+
+//13.	Create a function of your own that solves a problem. In comments, write what the function does and why you created it.
+
+/* I am going to create a function that tells me if I am over budget in my dining exepenses. I will imput a limit a month.*/
+
+
+
+ 
+
+function sumInput() {
+
+    let numbers = [];
+
+    let budget = prompt("What is your budget?", 0)
+    
+  
+  
+    while (true) {
+
+      
+      let expense = prompt("What was your dine in expense today?",0);
+      if (budget === "" || budget === null || !isFinite(budget)){break};
+      if (expense === "" || expense === null || !isFinite(expense)) {break};
+  
+
+  
+      numbers.push(+expense);
+    }
+  
+    let sum = 0;
+    for (let number of numbers) {
+      sum += number;
+    }
+    if( sum > budget){
+        return 'You spent ' + sum + "$ you are over your budget. No more eating out!";
+
+    }
+    return  'You spent ' + sum + "$ you can still eat out ";
+
+  }
+  
+  alert( sumInput() );
+
+
+ 
+
