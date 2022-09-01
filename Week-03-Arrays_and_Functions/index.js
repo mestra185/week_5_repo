@@ -4,7 +4,8 @@ const ages = [3, 9, 23, 64, 2, 8, 28, 93];
 
 console.log(ages)
 
-//a.	Programmatically subtract the value of the first element in the array from the value in the last element of the array (do not use numbers to reference the last element, find it programmatically, ages[7] – ages[0] is not allowed). Print the result to the console.
+//a.	Programmatically subtract the value of the first element in the array from the value in the last element of the array 
+//(do not use numbers to reference the last element, find it programmatically, ages[7] – ages[0] is not allowed). Print the result to the console.
 
 function minAges(age1, age2){
 
@@ -55,7 +56,8 @@ for (let name = 0; name < names1.length; name++){
 }
 console.log(sum1 / names1.length)
 
-//b.	Use a loop to iterate through the array again and concatenate all the names together, separated by spaces, and print the result to the console.
+//b.	Use a loop to iterate through the array again and concatenate all the names together, 
+//separated by spaces, and print the result to the console.
 
 let names2 = [...names]
 
@@ -67,7 +69,8 @@ for (let name = 0; name < names2.length; name++){
 
 console.log(sum2)
 
-//5.	Create a new array called nameLengths. Write a loop to iterate over the previously created names array and add the length of each name to the nameLengths array.
+//5.	Create a new array called nameLengths. Write a loop to iterate over the previously created names array and add the 
+//length of each name to the nameLengths array.
 //For example:
 
 let namesArray = ["Kelly", "Sam", "Kate"] //given this array
@@ -84,11 +87,15 @@ for (let nam = 0; nam < namesArray.length; nam++) {
     nameLengths = [newNum].concat(nameLengths) 
 
    
+
+    
+   
    
 }
+let nameLengths1 = nameLengths.reverse()
 
-console.log(nameLengths)
-let nameLengths1 = [...nameLengths]
+console.log(nameLengths1)
+
 
 //6.	Write a loop to iterate over the nameLengths array and calculate the sum of all the elements in the array. Print the result to the console.
 addNum  = 0
@@ -113,7 +120,6 @@ console.log(multWord("Hello", 3))
 
 //9.	Write a function that takes an array of numbers and returns true if the sum of all the numbers in the array is greater than 100.
 
-let aray = [10, 20, 100, 50]
 
 
 function trueIfOverHun(arr){
@@ -137,6 +143,9 @@ console.log(trueIfOverHun(nameLengths1))
  
 
 // 10.	Write a function that takes an array of numbers and returns the average of all the elements in the array.
+
+let aray = [10, 20, 100, 50]
+
 
 function averOfAllNum(arr){
     addNum  = 0
@@ -165,8 +174,8 @@ function averOfAllNum2(arr1, arr2 ){
     }
     let average1 = addNum1 / arr1.length
     let average2 = addNum2 / arr2.length
-    console.log(average1);
-    console.log(average2);
+    //console.log(average1);
+    //console.log(average2);
     if(average1 > average2){
         return true
     }
@@ -201,16 +210,16 @@ function sumInput() {
 
     let numbers = [];
 
-    let budget = prompt("What is your budget?", 0)
+    let budget = prompt("What is your budget?")
     
   
   
     while (true) {
 
       
-      let expense = prompt("What was your dine in expense today?",0);
+      let expense = prompt("What was your dine in expense today?");
       if (budget === "" || budget === null || !isFinite(budget)){break};
-      if (expense === "" || expense === null || !isFinite(expense)) {break};
+      if (expense === "" || expense === null || !isFinite(expense) || expense === 0) {break};
   
 
   
@@ -230,6 +239,52 @@ function sumInput() {
   }
   
   alert( sumInput() );
+
+  // Online Javascript Editor for free
+// Write, Edit and Run your Javascript code using JS Online Compiler
+
+console.log("Welcome to Programiz!");
+
+const customers = [
+    {
+        name: 'Sam',
+        address: {
+            street: '1234 W Bell Rd',
+            city: 'Phoenix',
+            zip: '85308',
+            state: 'AZ'
+        },
+        membershipLevel: 'GOLD',
+        age: 32
+    },
+       {
+        name: 'Sam',
+        address: {
+            street: '1234 W Bell Rd',
+            city: 'Phoenix',
+            zip: '85308',
+            state: 'AZ'
+        },
+        membershipLevel: 'GOLD',
+        age: 32
+    },
+           {
+        name: 'Sam',
+        address: {
+            street: '1234 W Bell Rd',
+            city: 'Phoenix',
+            zip: '85308',
+            state: 'AZ'
+        },
+        membershipLevel: 'GOLD',
+        age: 32
+    }
+    
+    //more customers with the same schema
+];
+
+
+
 
 
  
